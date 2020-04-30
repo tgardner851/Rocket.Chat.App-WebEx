@@ -28,10 +28,20 @@ export class WebExApp extends App {
             id: 'webex_company',
             type: SettingType.STRING,
             packageValue: '',
-            required: true,
+            required: false,
             public: false,
             i18nLabel: 'Customize_Company',
             i18nDescription: 'Customize_Company_Description',
+        });
+
+        await configuration.settings.provideSetting({
+            id: 'webex_handle',
+            type: SettingType.STRING,
+            packageValue: '',
+            required: false,
+            public: false,
+            i18nLabel: 'Customize_Handle',
+            i18nDescription: 'Customize_Handle_Description',
         });
 
         await configuration.settings.provideSetting({

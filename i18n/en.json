@@ -1,12 +1,12 @@
 {
-    "Bot": "The bot user that will represent WebEx",
-    "Bot_Description": "Create a bot user and type its username here.",
     "Customize_Icon": "Customize Icon",
     "Customize_Icon_Description": "Change the icon that is used for messages from this integration.",
     "Customize_Name": "Customize Name",
-    "Customize_Name_Description": "Choose the username that this integration will post as.",  
-    "Customize_Company": "Customize Company",
-    "Customize_Company_Description": "What your company subdomain for webex.com is (e.g. company.webex.com).",
+    "Customize_Name_Description": "Choose the username that this integration will post as.",
+    "Customize_Company": "Customize Company (Optional)",
+    "Customize_Company_Description": "What your subdomain for webex.com is (e.g. company.webex.com).",
+    "Customize_Handle": "Customize Handle (Optional)",
+    "Customize_Handle_Description": "What your handle for webex.com is, if static (e.g. company.webex.com/handle).",
     "Slash_Command_Description": "Start a WebEx conference from a channel.",
-    "Slash_Command_Params_Example": "[Meeting Handle (e.g. lfirst)]"
+    "Slash_Command_Params_Example": "[Meeting Handle (if applicable; will fallback to config or username)]"
 }

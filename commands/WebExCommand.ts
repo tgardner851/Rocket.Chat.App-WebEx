@@ -12,6 +12,7 @@ export class WebExCommand implements ISlashCommand {
     public async executor(context: SlashCommandContext, read: IRead, modify: IModify, http: IHttp): Promise<void> {
         const icon = await read.getEnvironmentReader().getSettings().getValueById('webex_icon');
         const company = await read.getEnvironmentReader().getSettings().getValueById('webex_company');
+        const handle = await read.getEnvironmentReader().getSettings().getValueById('webex_handle');
         const username = await read.getEnvironmentReader().getSettings().getValueById('webex_name');
         const messageSender = await read.getUserReader().getById(context.getSender().id);
 
@@ -25,7 +26,21 @@ export class WebExCommand implements ISlashCommand {
 
         let meetingUrl = '';
         if (context.getArguments().length >= 1) {
-            meetingUrl = `https://${company}.webex.com/join/${context.getArguments()[0].trim()}`;
+          const firstArg = context.getArguments()[0].trim();
+          let url;
+
+          try {
+            url = new URL(firstArg);
+          } catch (e) {
+            // do nothing
+          }
+          if (url && (url.protocol === 'http:' || url.protocol === 'https:')) {
+            meetingUrl = url;
+          } else {
+            meetingUrl = `https://${company}.webex.com/join/${firstArg}`;
+          }
+        } else if (handle && handle.length >= 1) {
+            meetingUrl = `https://${company}.webex.com/join/${handle}`;
         } else {
             meetingUrl = `https://${company}.webex.com/join/${messageSender.username}`;
         }

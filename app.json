@@ -1,12 +1,12 @@
 {
     "id": "ec9aa1c1-11b9-47e4-b919-bbc3fa2f2c00",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "requiredApiVersion": "^1.7.2",
     "iconFile": "icon.png",
     "author": {
-        "name": "RocketBooster",
-        "homepage": "https://apps.rocketbooster.net/webex",
-        "support": "https://github.com/wreiske/Rocket.Chat.App-WebEx/issues"
+        "name": "Thomas Gardner",
+        "homepage": "https://github.com/tgardner/Rocket.Chat.App-WebEx",
+        "support": "https://github.com/tgardner/Rocket.Chat.App-WebEx/issues"
     },
     "name": "WebEx Meetings",
     "nameSlug": "webex",
