@@ -2,6 +2,10 @@
 
 Start a WebEx from inside Rocket.Chat with a slash command.
 
+# Deprecated
+
+This project will no longer be maintained by me, I have retired my Rocket.Chat server in favor of a Matrix Synapse server.
+
 ## Configuration
 
 After installing from the Rocket.Chat Apps marketplace, please make sure you fill out the "Customize company" section in the App Details screen.
